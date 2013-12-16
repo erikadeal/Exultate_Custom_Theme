@@ -1,0 +1,713 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #565656;
+}
+
+#container {
+	background: #fff;
+}
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 300;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+	border-bottom: 1px dotted $light-gray;
+	padding-bottom: .3em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+	padding-bottom: .3em;
+	border-bottom: 1px dotted $light-gray;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+	border: 0;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	.widget {
+		display: none;
+	}
+}
+
+	#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.js nav {
+	overflow: hidden;
+	max-height: 0;
+}
+
+nav.active {
+	max-height: 55em;
+}
+
+.menu-link {
+	background: $red;
+	width: 100%;
+	padding: .5em;
+	margin-bottom: 0;
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+nav {
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+
+	font-family: $sans-serif;
+
+	ul {
+		margin-top: 0;
+	}
+}
+
+.nav {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 8px 15px;
+			background-color: lighten($light-gray, 10%);
+			border-bottom: 1px solid darken($light-gray, 10%);
+			position: relative;
+
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+
+			margin: 0;
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+					&:before {
+						content: "-";
+						position: absolute;
+						top: .5em;
+						left: 15px;
+					}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 2.2em;
+
+	article {
+		border-bottom: 3px double lighten($light-gray, 5%);
+	}
+
+	.fa {
+		color: $red;
+		font-size: 1.3em;
+		margin-right: 10px;
+		padding: 3px;
+	}
+}
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		.single-title,
+		.page-title {}
+
+		.single-title {}
+
+		.page-title {}
+
+		.archive-title { }
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+
+			time {}
+		}
+
+		/* entry content */
+		.entry-content {
+
+			p {}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 4px 0 7px;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.pagination{
+        text-align: center;
+        ul {
+            display: inline-block;
+            white-space: nowrap;
+            padding:0;
+            clear: both;
+            margin: 1px;
+            li {
+                padding: 0;
+                margin: 0;
+                float: left;
+                display: inline;
+                overflow: hidden;
+                a, span {
+                    margin: 0;
+                    text-decoration: none;
+                    padding: 0;
+                    line-height: 1em;
+                    font-size: 1em;
+                    font-weight: normal;
+                    padding: .5em;
+                    min-width: 1em;
+                    display: block;
+                }
+                span.current{
+                	font-weight: bold;
+                }
+                a:hover, a:focus {
+                    
+                }
+            }
+        }
+    } /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	.glance {
+		background: $red;
+		color: $white;
+		padding: .3em .5em;
+	}
+}
+
+	.widgettitle { font-weight: 400; }
+
+	.widget {
+
+		border-bottom: 3px double lighten($light-gray, 5%);
+		padding: 1em 0;
+
+		ul {
+
+			li {
+
+				&:first-child {}
+
+				&:last-child {}
+
+				a {}
+
+				/* deep nesting */
+				ul {}
+
+			}
+
+		}
+
+	}
+
+#searchform {
+	label { display: none; }
+	input[type="submit"] {
+		background: $red;
+		color: $white;
+		padding: .3em .5em;
+		border-radius: 3px;
+		font-family: $sans-serif;
+		font-size: .9em;
+		border: 0;
+
+		&:hover { color: $white; background: darken($red, 5%); }
+	}
+	}
+
+/* Social Media Styles using Brankic Social Media Widget */
+
+.bra-social-media-widget {
+	ul {
+	 margin-left: 30%;
+	 padding-bottom: 1em;
+	}
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	background: $red;
+	color: #fff;
+
+	#searchform {
+		label { display: none; }
+		input[type="submit"] {
+		background: $white;
+		color: $red;
+
+		&:hover { color: $red; background: darken($white, 10%); }
+	}
+	}
+	}
+
+	#inner-footer {
+		background: #232323;
+		text-align: center;
+}
+
+	
+	.footer-links {
+
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+
+/** STICKY FOOTER **/
+
+#content {
+	height: auto;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+/*********************
+FRONT PAGE STYLES
+*********************/
+
+#featured-images {
+	display: none;
+}
+
+/*************************
+CONCERT STYLES
+*************************/
+
+.events-list {
+
+	td {
+		vertical-align: top;
+		padding-bottom: .5em;
+	}
+
+	.button {
+		float: right;
+}
+	
+}
+
+.concert .sidebar {
+	
+	.buy-button {
+		text-align: center;
+	}
+}
+
+#content .widget article:last-child {
+	border: 0;
+}
+
+.event-header {
+	text-decoration: none;
+
+	h3 {
+		font-size: 1em;
+		border-bottom: 1px dotted $light-gray;
+	}
+
+}
+
+/******************************************************************
+RECORDINGS PAGE STYLES
+******************************************************************/
+
+#validation-message { display: none; }
+
+#content .recordings article {
+	border: 0;
+}
+
+.recordings {
+	
+	.recording {
+		-webkit-box-shadow:  0px 0px 5px rgba(50, 50, 50, 0.3);
+		-moz-box-shadow:     0px 0px 5px rgba(50, 50, 50, 0.3);
+		box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.3);
+		margin: 0 2em;
+		text-align: center;
+
+		a {
+			color: $white;
+			text-decoration: none;
+			}
+
+		.h2 {
+			border: 0;
+			background: $red;
+			margin-top: 0;
+			padding: .5em 1em;
+			font-size: 1.3em;
+			cursor: pointer;
+
+			&:hover { background: darken($red, 5%); }
+		}
+
+		.entry-content {
+			padding: 0 1em;
+		}
+	}
+
+	#recordings-grid {
+		margin-top: 2em;
+	}
+
+}
+
+#recordings_sidebar {
+	margin-top: 6em;
+
+	.widget:first-child {
+		margin-top: 0;
+
+		h4 {
+			margin-top: 0;
+		}
+	}
+}
