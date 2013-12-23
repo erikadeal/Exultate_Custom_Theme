@@ -37,7 +37,6 @@ HEADER STYLES
 *********************/
 
 .header {
-	border-bottom: 2px solid lighten($light-gray, 10%);
 
 	.widget {
 		display: block;
@@ -47,6 +46,23 @@ HEADER STYLES
 		h4 { margin: 0; }
 
 		ul { float: right; margin-top: 0; margin-bottom: 0; }
+	}
+
+	.fourcol { 
+		width: 100%;
+		text-align: center;
+	}
+
+	.eightcol { 
+		width: 100%;
+		border-top: 2px solid #f2f2f2;
+		border-bottom: 2px solid #f2f2f2;
+
+		.nav {
+			text-align: center; 
+
+			li { display: inline-block; }
+		}
 	}
 }
 
@@ -66,7 +82,7 @@ NAVIGATION STYLES
 nav {
 
 	ul {
-		margin-top: 1.5em;
+		margin: .5em 0;
 	}
 }
 
@@ -75,7 +91,6 @@ nav {
 	display: block;
 
 	li {
-		float: right;
 		position: relative;
 		right: 0;
 
@@ -84,11 +99,12 @@ nav {
 			background: $white;
 			border-top: 0;
 			border-bottom: 0;
+			border-top: 3px solid $white;
+			border-bottom: 3px solid $white;		
 
 			&:hover, &:focus {
 				
-				border-top: 2px solid $red;
-				border-bottom: 2px solid $red;				
+				border-color: $red;			
 
 			}
 		}
@@ -103,7 +119,6 @@ nav {
 		ul.children {
 			margin-top: 0;
 			border: 1px solid #ccc;
-			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
@@ -166,8 +181,8 @@ nav {
 	li.current-menu-item,
 	li.current-page-item {
 		a {
-			border-top: 2px solid $red;
-			border-bottom: 2px solid $red;	
+			border-top: 3px solid $red;
+			border-bottom: 3px solid $red;	
 		}
 
 		li {
@@ -214,11 +229,6 @@ SIDEBARS & ASIDES
 			}
 		}
 	}
-
-#footer-widgets {
-	.widget { border: 0; text-align: center;}
-	.widgettitle { margin: 0 2em; border-color: $white;}
-}
 
 
 	/* links widget */
@@ -316,43 +326,6 @@ FOOTER STYLES
 .footer {
 	max-width: 1200px;
 	margin: 0 auto;
-}
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
-	}
-} /* end .footer-links */
-
-/** STICKY FOOTER **/
-
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-#container {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -270px; 
-}
-#container:after {
-  content: "";
-  display: block;
-}
-.footer, #container:after {
-  /* .push must be the same height as footer */
-  height: 270px; 
 }
 
 

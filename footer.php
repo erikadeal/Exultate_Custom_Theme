@@ -1,4 +1,3 @@
-			</div>
 			<footer class="footer" role="contentinfo">
 
 				<div id="footer-widgets" class="wrap clearfix">
@@ -35,6 +34,8 @@
 				</div>
 
 			</footer>
+
+			</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>

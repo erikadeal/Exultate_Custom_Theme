@@ -53,45 +53,48 @@ Template Name: Concert Archive
 
 								</header>
 
-								<section class="entry-content eightcol first pull-4 clearfix">
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
 								<section class="sidebar fourcol last push-8 clearfix">
+
+								<aside>
 									
 									<?php
 									$date = DateTime::createFromFormat('Ymd', get_field('date_1'));
 									$date1 = $date->format('l, F j, Y');
 									?>
 
-									<table class="events-list">
-										<tbody>
-											<tr>
-												<td><i class="fa fa-calendar"></i></td>
-												<td><time><?php the_field("time_1"); ?> on </time><?php echo $date1 ?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_1'); ?>"><?php $location = get_field('location_1'); echo $location['address']?></a></td>
-											</tr>
+										<table class="events-list">
+											<tbody>
+												<tr>
+													<td><i class="fa fa-calendar"></i></td>
+													<td><time><?php the_field("time_1"); ?> on </time><?php echo $date1 ?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_1'); ?>"><?php $location = get_field('location_1'); echo $location['address']?></a></td>
+												</tr>
 
-									<?php if (get_field('date_2'))
+												<?php if (get_field('date_2'))
 
-									{ ?>
-									<tr>
-									<td><i class="fa fa-calendar"></i></td>
-									<td><time><?php the_field("time_2"); ?> on </time><?php $date = DateTime::createFromFormat('Ymd', get_field('date_2')); $date2 = $date->format('l, F j, Y'); echo $date2?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_2'); ?>"><?php $location = get_field('location_2'); echo $location['address']?></a></td>
-									</tr>
-									<?php }?>
+												{ ?>
+													<tr>
+														<td><i class="fa fa-calendar"></i></td>
+														<td><time><?php the_field("time_2"); ?> on </time><?php $date = DateTime::createFromFormat('Ymd', get_field('date_2')); $date2 = $date->format('l, F j, Y'); echo $date2?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_2'); ?>"><?php $location = get_field('location_2'); echo $location['address']?></a></td>
+													</tr>
+												<?php }?>
 
-									<?php if (get_field('date_3'))
+												<?php if (get_field('date_3'))
 
-									{ ?>
-									<tr>
-									<td><i class="fa fa-calendar"></i></td>
-									<td><time><?php the_field("time_3"); ?> on </time><?php $date = DateTime::createFromFormat('Ymd', get_field('date_3')); $date3 = $date->format('l, F j, Y'); echo $date3?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_3'); ?>"><?php $location = get_field('location_2'); echo $location['address']?></a></td>
-									</tr>
-									<?php }?>
-										</tbody>
-									</table>
+												{ ?>
+													<tr>
+														<td><i class="fa fa-calendar"></i></td>
+														<td><time><?php the_field("time_3"); ?> on </time><?php $date = DateTime::createFromFormat('Ymd', get_field('date_3')); $date3 = $date->format('l, F j, Y'); echo $date3?> at <a target="blank" href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo the_field('location_3'); ?>"><?php $location = get_field('location_2'); echo $location['address']?></a></td>
+													</tr>
+												<?php }?>
+											</tbody>
+										</table>
+									</aside>
+
+								</section>
+
+								<section class="entry-content eightcol first pull-4 clearfix">
+
+									<?php the_excerpt(); ?>
 
 								</section>
 

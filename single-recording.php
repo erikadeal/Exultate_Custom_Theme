@@ -41,8 +41,7 @@ single-bookmarks.php
 								<div id="validation-message">
 								<p>1 Item added to cart.</p>
 
-								<!-- FIX THIS -->
-								<p><a href="http://localhost/testultate/?page_id=32">Continue shopping</a> or <a href="<?php echo esc_url( get_option( 'shopping_cart_url' ) ); ?>">checkout</a></p>
+								<p><a href="<?php echo home_url(); ?>/recordings/">Continue shopping</a> or <a href="<?php echo esc_url( get_option( 'shopping_cart_url' ) ); ?>">checkout</a></p>
 								</div>
 								<?php if (get_field('itunes_url'))
 

@@ -1104,3 +1104,9 @@ background-color: #f5f5f5;
 	text-decoration: none;
 	font-size: 14px;
 }
+
+/* Extra CSS for widgets */
+
+.oldprice { text-decoration: line-through; }
+
+.currentprice { font-weight: bold; }

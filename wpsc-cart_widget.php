@@ -55,9 +55,6 @@
 <?php else: ?>
 	<p class="empty">
 		<?php _e('Your shopping cart is empty', 'wpsc'); ?><br />
-
-		<!-- FIX THIS -->
-		<a target="_parent" href="http://localhost/testultate/?page_id=32" class="visitshop" title="<?php esc_html_e('Visit Shop', 'wpsc'); ?>"><?php esc_html_e('Visit the shop', 'wpsc'); ?></a>
 	</p>
 <?php endif; ?>
 

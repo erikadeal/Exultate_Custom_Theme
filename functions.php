@@ -39,6 +39,9 @@ include_once('advanced-custom-fields/acf.php' );
 //require plugins file
 require_once( 'library/plugins.php' );
 
+//require custom admin file
+require_once( 'library/custom-admin.php' );
+
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes

@@ -44,7 +44,7 @@ function recording_posts() {
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/recording-post-icon.png', /* the icon for the recording post type menu */
+			'menu_icon' => 'dashicons-format-audio',
 			'rewrite'	=> array( 'slug' => 'recording_type', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'recording_type', /* you can rename the slug here */
 			'capability_type' => 'post',
