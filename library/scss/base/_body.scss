@@ -1,0 +1,15 @@
+body {
+	font-family: $serif;
+	line-height: 1.6;
+	color: $main;
+	background: $footer;
+	word-wrap: normal;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+}
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}

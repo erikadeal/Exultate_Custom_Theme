@@ -27,6 +27,7 @@ NAVIGATION STYLES
 	.menu {
 		ul {
 			li {
+
 				a {
 					
 					/*
@@ -73,7 +74,15 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-			
+	
+	
+	.contact {
+		text-align: center;
+		li {
+			display: inline-block;
+			padding: 1em 3em;
+		}
+	}
 	
 	/* at this larger size, we can start to align images */
 	.alignleft, img.alignleft { 

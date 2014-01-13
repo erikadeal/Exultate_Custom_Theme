@@ -19,9 +19,9 @@ import the mixins file so SASS can understand the variables.
 */
 
 /* import mixins */
-@import "mixins";
+@import "base/_mixins";
 
-@import "grid";
+@import "layout/_grid";
 @import "481up";
 @import "768up";
 @import "1030up";

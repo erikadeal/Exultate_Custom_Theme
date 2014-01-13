@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Exultate
+Author: Erika Deal
 
 Stylesheet: Main Stylesheet
 
@@ -16,10 +16,20 @@ of the styles inside media queries.
 //
 
 // import normalize
-@import "normalize";
+@import "base/_normalize";
 
 // import mixins
-@import "mixins";
+@import "base/_mixins";
+
+//import variables
+@import "base/_variables";
+
+/* ====================== *
+* $TypePlate
+* // Authored by Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals)
+*/ @import 'base/_vars-typeplate';
+ 	@import "base/_typeplate";
+
 
 /*
 BASE (MOBILE) SIZE
@@ -29,7 +39,21 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 */
 
 // styles in base.scss
-@import "base";
+@import "base/_body";
+@import "base/_classes";
+@import "base/_headings";
+@import "base/_links";
+@import "base/_navigation";
+@import "base/_pageNavi";
+@import "base/_content";
+@import "base/_sidebar";
+@import "base/_footers";
+
+// brand-specific page styles
+
+@import "brand/_contact";
+@import "brand/_front-page";
+
 
 /*
 LARGER MOBILE DEVICES
@@ -53,7 +77,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 768px) {
 
 	// import grids
-	@import "grid";
+	@import "layout/_grid";
 
 	// styles in 768up.scss
 	@import "768up";

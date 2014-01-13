@@ -10,34 +10,34 @@
 
 							<header class="article-header">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+								<h1><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h1>
 
-							</header>
+							</header> <!-- end article header -->
 
 							<section class="entry-content">
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
 
-							</section>
+							</section> <!-- end article section -->
 
 							<section class="search">
 
 									<p><?php get_search_form(); ?></p>
 
-							</section>
+							</section> <!-- end search section -->
 
 							<footer class="article-footer">
 
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
+									<p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
 
-							</footer>
+							</footer> <!-- end article footer -->
 
-						</article>
+						</article> <!-- end article -->
 
-					</div>
+					</div> <!-- end #main -->
 
-				</div>
+				</div> <!-- end #inner-content -->
 
-			</div>
+			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
