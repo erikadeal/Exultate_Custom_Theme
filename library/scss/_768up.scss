@@ -17,31 +17,12 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {
-	font-size: .9em;
-	margin-top: 0;
+body {}
+
+#container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
-
-@media screen and (min-width: 960px) {
-
-#inner-content {
-	max-width: 1030px;
-	min-width: 1030px;
-}
-
-#main {
-	
-	margin-top: 0;
-
-	.main-content {
-
-		padding-top: 1em;
-		
-	}
-}
-
-}
-
 
 /*********************
 LAYOUT & GRID STYLES
@@ -51,259 +32,84 @@ LAYOUT & GRID STYLES
 	max-width: 1140px;
 }
 
-
-.featured-image {
-	img {
-		width: 100%;
-	}
-}
-
-.archive-article {
-     display:inline-block;
-     vertical-align:top;
-     width:28%;
-     margin:1.25%;
-     min-height:190px;
-
-     .entry-content {
-
-     	p {
-     		width: 100%;
-     		margin-top: 0;
-     	}
-
-     	img {
-     		
-     	}
-     }
-
-     .order-button {
-     	float: right;
-     	margin-top: -1em;
-     }
-}
-
 /*********************
 HEADER STYLES
 *********************/
 
 .header {
-	text-align: left;
-	padding-bottom: 1em;
-	background: $white;
-	position: relative;
-	border: 0;
 
-}
+	.widget {
+		display: block;
+		border: 0;
+		margin: 0;
 
-@media screen and (min-width: 768px) and (max-width: 959px) {
-	
-	#inner-header {
-		width: 768px;
+		h4 { margin: 0; }
+
+		ul { float: right; margin-top: 0; margin-bottom: 0; }
 	}
 
-	#logo {
-
-		left: 33%;
-	}
-
-	.header {
-
-	&:after {
-		top: 9.5em;
-
-	}
-
-	}
-
-	nav.ninecol {
-
-		position: absolute;
-		padding-top: 7em;
-		left: 0;
+	.fourcol { 
 		width: 100%;
+		text-align: center;
+	}
 
+	.eightcol { 
+		width: 100%;
+		border-top: 2px solid #f2f2f2;
+		border-bottom: 2px solid #f2f2f2;
 
-		ul {
+		.nav {
+			text-align: center; 
 
-			text-align: center;
-
-
-			li.current-menu-item,
-			li.current_page_item {
-
-				a {
-				&:before{
-				content: "";
-				top: 2.1em;
-				right: 0;
-				position: absolute;
-				height: 0.5em;
-				width: 100%;
-				background: $highlight;
-				border-top: 1px dashed $main;
-				}
-			}
-			}
-
-			li {
-
-				a {
-
-					padding-top: 0;
-
-					&:hover {
-					&:before{
-					content: "";
-					top: 2.1em;
-					right: 0;
-					position: absolute;
-					height: 0.5em;
-					width: 100%;
-					background: $highlight;
-					border-top: 1px dashed $main;
-			}
-			}
-				}
-			}
+			li { display: inline-block; }
 		}
 	}
 }
 
-@media screen and (min-width: 960px) {
-#inner-header {
-	max-width: 1030px;
-	min-width: 1030px;
-}
-
-}
-
-#logo {
-	
-
-	img {
-	display: block;
-	}
-}
-
-.article-header {
-	padding: 4em 0em 0em 0em;
-}
-
-.archive-header {
-	color: $highlight;
-	font-size: 3em;
-	text-align: center;
-	z-index: 50;
-	margin-top: 1em;
-
-}
-
-.intro-body {
-
-	border-top: 1px solid $body;
-	margin-top: -2em;
-	padding-top: 2em;
-}
-
+	#logo {}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
-nav[role=navigation] {
-	input {
-		display: none;
-	}
+.menu-link { display: none; }
 
-	label {
-		display: none;
-	}
+.js nav { 
+	overflow: visible;
+	max-height: none; 
 }
 
-#inner-header {
-	.eightcol {
-		margin-left: 0;
-	}
+nav {
 
-	font-size: 1.1em;
+	ul {
+		margin: .5em 0;
+	}
 }
 
 .nav {
 	border: 0;
-	top: 0;
-	margin-bottom: 0em;
-	text-align: right;
-	font-size: .8em;
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-						 {
-
-
-
-			a {
-
-				background: $highlight;
-				color: $main;
-				padding-left: 1em;
-				padding-right: 1em;
-
-				&:before{
-				content: "";
-				top: 5.7em;
-				right: 0;
-				position: absolute;
-				height: 1em;
-				width: 100%;
-				background: $highlight;
-				border-top: 1px dashed $main;
-			}
-				
-			}
-
-	}  /* end current highlighters */
+	display: block;
 
 	li {
-		display: inline-block;
 		position: relative;
-		font-size: 1em;
-		margin-left: -.3em;
-		font-family: $open;
-		font-size: 1.1em;
-
+		right: 0;
 
 		a {
 			border-bottom: 0;
-			color: lighten($body, 25%);
-			padding-top: 3.7em;
-			padding-left: 1em;
-			padding-right: 1em;
-			
+			background: $white;
+			border-top: 0;
+			border-bottom: 0;
+			border-top: 3px solid $white;
+			border-bottom: 3px solid $white;		
 
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
 			&:hover, &:focus {
-				background-color: $highlight;
-				color: $main;
+				
+				border-color: $red;			
 
-				&:before{
-				content: "";
-				top: 5.7em;
-				right: 0;
-				position: absolute;
-				height: 1em;
-				width: 100%;
-				background: $highlight;
-				border-top: 1px dashed $main;
-			}
 			}
 		}
 
-		&:first-child { margin-top: 0;}
+		&:first-child {}
 		&:last-child {}
 
 		/*
@@ -312,49 +118,29 @@ nav[role=navigation] {
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			display: none;
+			border: 1px solid #ccc;
 			position: absolute;
+			display: none;
 			z-index: 8999;
-			text-align: left;
-			background: $highlight;
-			font-size: 1.1em;
 
 			li {
-				font-size: .8em;
-				margin-top: 0;
-				margin-left: 0;
-
-				&:hover {
-					background: darken($highlight, 5%);
-				}
 
 				a {
+					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 12em;
-					padding: 0;
-					margin: 0;
-					background: $highlight;
-					color: $main;
-					padding-left: 10px;
-					
-					&:before {
+					width: 180px;
+					border-bottom: 1px solid #ccc;
 
-						content: "";
-						top: 0;
-						left: 0;
-						height: 0;
-						width: 0;
-						position: absolute;
-						background: $highlight;
-						border: 0;
+					&:hover,
+					&:focus {
+						background: #eee;
 					}
 
 					&:link {}
 
-					&:hover {
-						background: darken($highlight, 5%);
-						color: $main;
+					&:before {
+						content: "";
 					}
 				}
 
@@ -372,22 +158,15 @@ nav[role=navigation] {
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-				ul {
-					display: none;
-				}
+				ul {}
 			}
 
 			/* highlight sub-menu current page */
 			li.current-menu-item,
 			li.current_page_item,
 			li.current-page-ancestor {
-				background-color: $main;
-
 				a {
-					color: $main;
-					background: darken($highlight, 5%);
 				}
-
 			}
 		}
 
@@ -399,107 +178,40 @@ nav[role=navigation] {
 
 	} /* end .menu ul li */
 
-
-	li.current-menu-item {
-		ul {
-			
+	li.current-menu-item,
+	li.current-page-item {
+		a {
+			border-top: 3px solid $red;
+			border-bottom: 3px solid $red;	
 		}
-	}
+
+		li {
+			a {
+				border: 0;
+			}
+		}
+	} 
 
 } /* end .nav */
-
-ul.top-nav { margin-top: -1.2em; }
-
-.action-buttons {
-	position: absolute;
-	padding-top: 2em;
-
-	ul {
-		li{
-
-			padding: 2em 0; 
-
-			a {
-				color: #fff;
-				text-decoration: none;
-				font-family: $sans-serif;
-				font-size: 1.5em;
-				padding: .5em 1em;
-				background: rgba(68, 68, 68, 0.75);
-
-				&:hover {
-					padding-right: 2em;
-					background: rgba(68, 68, 68, 0.95);
-					-webkit-transition: all .3s ease-in-out;
-					-moz-transition: all .3s ease-in-out;
-					-ms-transition: all .3s ease-in-out;
-					-o-transition: all .3s ease-in-out;
-					transition: all .3s ease-in-out;
-				}
-			}
-		}
-	}
-}
-
-.sub-nav {
-		ul {
-
-			li {
-
-				a {
-					
-				}
-			}
-		}
-}
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
+	padding-left: 1em;
+	border-left: 1px dotted $light-gray;
 }
 
 	.widgettitle {
+		border-bottom: 1px dotted $light-gray;
 		margin-bottom: 0.75em;
-		position: relative;
-		text-align: center;
-
-
-		&:after {
-			content: "";
-			top: .5em;
-			left: 0;
-			height: 1px;
-			width: 10%;
-			background: $body;
-			position: absolute;
-		}
-
-		&:before {
-			content: "";
-			top: .5em;
-			right: 0;
-			height: 1px;
-			width: 10%;
-			background: $body;
-			position: absolute;
-		}
-
 	}
 
-@media screen and (min-width: 960px) {
-	
-	.widgettitle {
-
-		&:before, &:after {
-
-			width: 20%;
-		}
-	}
-}
 	.widget {
 		padding: 0 10px;
+		padding-bottom: 1em;
+		margin: 2.2em 0;
 
 		ul {
 			li {
@@ -611,31 +323,66 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
+.footer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
-@media screen and (min-width: 960px) {
-.inner-footer {
-	max-width: 1030px;
-	min-width: 1030px;
+
+/***********************
+FRONT PAGE STYLES
+***********************/
+
+#featured-images {
+	display: block;
+	margin-top: 2em;
 }
-}
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
+
+.featured-image {
+
+	img {
+		width: 100%;
+		margin-bottom: -.5em;
+	}
+	
+	.call-to-action {
+		background: $red;
+		color: $white;
+		font-family: $sans-serif;
+		margin-top: 0;
+		text-align: center;
+		padding: .5em 0;
+		font-size: 1.3em;
+
+		&:hover {
+			background: darken($red, 5%);
 		}
 	}
-} /* end .footer-links */
 
+	.tagline {
+		text-decoration: none;
+		color: lighten($dark-gray, 20%);
+		font-family: $sans-serif;
+		font-style: italic;
+		text-align: center;
+	}
+
+	a {
+		&:hover { text-decoration: none; }
+	}
+}
+
+/************************
+RECORDINGS PAGE STYLES
+************************/
+
+.recordings #main {
+	padding-bottom: 2em;
+}
+
+.archived-recording {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+	min-height: 190px;
+}

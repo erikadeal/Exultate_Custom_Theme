@@ -1,0 +1,15 @@
+.woocommerce div.product div.images, .woocommerce #content div.product div.images, .woocommerce-page div.product div.images, .woocommerce-page #content div.product div.images {
+	width: 25%;
+}
+
+.woocommerce div.product div.summary, .woocommerce #content div.product div.summary, .woocommerce-page div.product div.summary, .woocommerce-page #content div.product div.summary{
+	width: 65%;
+}
+
+.woocommerce .related ul.products li.product, .woocommerce .related ul li.product, .woocommerce .upsells.products ul.products li.product, .woocommerce .upsells.products ul li.product, .woocommerce-page .related ul.products li.product, .woocommerce-page .related ul li.product, .woocommerce-page .upsells.products ul.products li.product, .woocommerce-page .upsells.products ul li.product{
+	width: 30%;
+}
+
+.woocommerce .related ul.products li.product img, .woocommerce .related ul li.product img, .woocommerce .upsells.products ul.products li.product img, .woocommerce .upsells.products ul li.product img, .woocommerce-page .related ul.products li.product img, .woocommerce-page .related ul li.product img, .woocommerce-page .upsells.products ul.products li.product img, .woocommerce-page .upsells.products ul li.product img{
+	width: 75%;
+}
